@@ -1,11 +1,11 @@
-@smoke
+@web-ui
 Feature: Login
   Test login
 
   Background:
     Given user is on the login page
 
-  @web-ui
+  @smoke @regression
   Scenario Outline: Test login with wrong credentials
     When the user gives the wrong "<phone_number>" or "<password>"
     Then the user should not be logged in
@@ -17,7 +17,7 @@ Feature: Login
       | 0711234987    | #$^&*()   |
       | 0799127685    | password  |
 
-  @web-ui
+  @smoke
   Scenario Outline: Test login with missing credentials
       When the user gives the wrong "<phone_number>" or "<password>"
       Then there should be a prompt for the missing entry
@@ -26,7 +26,7 @@ Feature: Login
         | 0712345678    |           |
         |               | safaricom |
 
-  @web-ui
+  @smoke @regression
   Scenario: Test login with correct credentials
     When the user gives the correct "phone_number" and "password"
     Then the user should be logged in and the profile button should be visible
