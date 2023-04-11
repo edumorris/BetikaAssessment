@@ -1,6 +1,7 @@
 package com.betika.pages;
 
 import com.betika.pojo.MatchesSelected;
+import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -22,6 +23,7 @@ import java.util.Random;
 import static com.betika.utility.BrowserUtil.waitFor;
 import static com.betika.utility.Driver.getDriver;
 
+@Getter
 public class HomePageCommons {
     @FindBy(xpath = "//span[(.)='Profile']")
     private WebElement profileBtn;

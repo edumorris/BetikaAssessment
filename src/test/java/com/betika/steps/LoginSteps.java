@@ -8,6 +8,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static com.betika.utility.BrowserUtil.waitFor;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -53,6 +58,11 @@ public class LoginSteps {
 
     @Then("the user should be logged in and the profile button should be visible")
     public void theUserShouldBeLoggedIn() {
+        WebElement profileBtn = homeCommons.getProfileBtn();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(profileBtn));
+
         assertThat(homeCommons.buttonIsDisplayed("profile"), is(true));
     }
 
