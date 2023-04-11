@@ -28,7 +28,7 @@ Feature: Login
 
   @smoke @regression @wip
   Scenario: Test login with correct credentials
-    When the user gives the correct "phone_number" and "password"
+    When the user gives the correct "phone_number" and "pwd"
     Then the user should be logged in and the profile button should be visible
 
     # Enter steps here

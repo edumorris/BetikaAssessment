@@ -4,7 +4,7 @@ Feature: Betting
 
   Background:
     Given user is on the login page
-    And the user gives the correct "phone_number" and "password"
+    And the user gives the correct "phone_number" and "pwd"
     When the user access the "soccer_matches_subdirectory"
 
   @regression
