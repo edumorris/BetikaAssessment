@@ -1,5 +1,8 @@
 # BETIKA INTERVIEW ASSESSMENT
 
+## Technologies Used
+### Java, Selenium, Junit, Cucumber, RestAssured
+
 ## Setup & Running Instructions
 1. [ ] After cloning the repository, download all the dependencies from the pom.xml file.
 2. [ ] Ensure that you are using JDK11 or JDK8.
@@ -14,6 +17,7 @@
 2. String editing in the website might raise some exceptions in the code if encountered and not caught.
 3. UI change in login isn't handled in the code but can be handled.
 4. Too many login attempts from the same credentials will cause the credentials to be blocked. This is however fixable by having another set of credentials that can be used to login
+   - In the case that the login credentials in the config file are blocked by too many login attempts, change the credentials to one that isn't block. This can also be implemented programmatically.
 
 ## Other Possible Test Cases (Not limited to this list)
 1. [ ] Checking odds placed in a bet
